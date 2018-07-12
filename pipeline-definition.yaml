@@ -97,7 +97,7 @@ Resources:
               "phases:",
               "  install:",
               "    commands:",
-              "      - pip install jinja2 markupsafe",
+              "      - pip install jinja2 markupsafe -t src/",
               !Join ["", [
                   "      - aws cloudformation package",
                   !Join ["", [" --template-file ", !Ref TemplateFileName]],
@@ -108,11 +108,6 @@ Resources:
               "artifacts:",
               "  type: zip",
               "  files:",
-              !Join ["", [
-                  "    - ",
-                  !Ref TemplateFileName
-                ]
-              ],
               !Join ["", [
                   "    - Output",
                   !Ref TemplateFileName
