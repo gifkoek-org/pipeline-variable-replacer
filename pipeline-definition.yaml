@@ -90,7 +90,7 @@ Resources:
         Type: CODEPIPELINE
         #BuildSpec: ci/buildspec_ignore.yml
         BuildSpec:
-          # note to self - !Join doesn"t seem to like "" - for some reason it ignores the delimiter so use ""
+          # note to self - !Join doesn't seem to like '' - for some reason it ignores the delimiter so use ""
           # i'm observing the YAML indentation requirements manually below, not sure if this is necessary or not
           !Join ["\n", [
               "version: 0.1",
